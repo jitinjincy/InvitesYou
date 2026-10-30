@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="docTitle">Wedding Invitation</title>
+
+  <!-- Link previews -->
+  <meta name="description" content="Inviting you to our marriage.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jitin & Jincy">
+  <meta property="og:title" content="Jitin & Jincy are getting married">
+  <meta property="og:description" content="Join us Saturday, January 16, 2027 at 10:30 AM IST — Sacred Heart Church, Manimala, Kerala.">
+  <meta property="og:image" content="https://madhaven.github.io/InvitesYou/og-image.png">
+  <meta property="og:image:secure_url" content="https://madhaven.github.io/InvitesYou/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jitin &amp; Jincy wedding invitation card">
+  <meta property="og:url" content="https://madhaven.github.io/InvitesYou/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jitin & Jincy are getting married">
+  <meta name="twitter:description" content="Join us Saturday, January 16, 2027 at 10:30 AM IST — Sacred Heart Church, Manimala, Kerala.">
+  <meta name="twitter:image" content="https://madhaven.github.io/InvitesYou/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-cream: #EFEAE0;
+      --surface-alt: rgba(230, 224, 212, 0.5);
+      --ink-charcoal: #1A1918;
+      --ink-soft: #56524C;
+      --ink-muted: #8A857D;
+      --line-subtle: #D8D2C6;
+      --accent-gold: #9B7D4E;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Spectral', Georgia, serif;
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--ink-charcoal);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      /* Subtle radial gradients to add depth without borders */
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.3) 0%, transparent 70%),
+        radial-gradient(circle at 50% 100%, rgba(206, 198, 184, 0.4) 0%, transparent 60%);
+    }
+
+    /* Full Screen Wrapper - Airy and open */
+    .invitation-wrapper {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+      text-align: center;
+    }
+
+    .monogram-badge {
+      width: 64px;
+      height: 64px;
+      border: 1px solid var(--line-subtle);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      background-color: transparent;
+    }
+
+    .monogram-badge span {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      font-weight: 500;
+      margin-left: 2px;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .couple-names {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      line-height: 1.15;
+      font-weight: 400;
+      color: var(--ink-charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .couple-names .ampersand {
+      display: block;
+      font-style: italic;
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      margin: 0.2rem 0;
+      font-weight: 300;
+    }
+
+    .invitation-note {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    .hairline-divider {
+      height: 1px;
+      background-color: var(--line-subtle);
+      width: 100%;
+      max-width: 400px;
+      margin: 3.5rem auto;
+      position: relative;
+    }
+
+    .hairline-divider::after {
+      content: '◆';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--bg-cream);
+      padding: 0 0.8rem;
+      font-size: 0.55rem;
+      color: var(--accent-gold);
+    }
+
+    /* Date & Countdown Box */
+    .interactive-date-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--line-subtle);
+      padding: 1.75rem;
+      cursor: pointer;
+      margin: 0 auto;
+      max-width: 500px;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .interactive-date-card:hover {
+      border-color: var(--accent-gold);
+      background: rgba(246, 243, 237, 0.9);
+    }
+
+    .date-main {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink-charcoal);
+      letter-spacing: 0.05em;
+    }
+
+    .time-sub {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-top: 0.4rem;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .countdown-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 55px;
+    }
+
+    .countdown-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--ink-charcoal);
+    }
+
+    .countdown-lbl {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ink-muted);
+      margin-top: 0.4rem;
+    }
+
+    .toggle-cue {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      margin-top: 1rem;
+    }
+
+    /* Calendar buttons */
+    .calendar-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-cal {
+      background: transparent;
+      border: 1px solid var(--line-subtle);
+      padding: 0.6rem 1.2rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-soft);
+      font-family: var(--font-body);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-cal:hover {
+      border-color: var(--ink-charcoal);
+      color: var(--ink-charcoal);
+      background-color: #FFF;
+    }
+
+    /* Itinerary */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--ink-charcoal);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 2.5rem;
+    }
+
+    .itinerary-list {
+      list-style: none;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .itinerary-item {
+      display: flex;
+      padding: 1.25rem 0;
+      border-bottom: 1px dashed rgba(216, 210, 198, 0.7);
+      align-items: baseline;
+    }
+
+    .itinerary-item:last-child {
+      border-bottom: none;
+    }
+
+    .itinerary-time {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--accent-gold);
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    .itinerary-name {
+      font-size: 1.05rem;
+      color: var(--ink-charcoal);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .itinerary-sub {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+
+    /* Venue */
+    .venue-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .venue-address {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .map-frame-wrapper {
+      border: none;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      height: 280px;
+      background: transparent;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+      mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(100%) contrast(150%) brightness(110%);
+    }
+
+    .btn-directions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.6rem;
+      border: 1px solid var(--ink-charcoal);
+      background-color: var(--ink-charcoal);
+      color: #FCFAF6;
+      text-decoration: none;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      transition: var(--transition);
+    }
+
+    .btn-directions:hover {
+      background-color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .valediction {
+      margin-top: 5rem;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .invitation-wrapper {
+        padding: 4rem 1.25rem;
+      }
+      .couple-names {
+        font-size: 2.5rem;
+      }
+      .itinerary-item {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .itinerary-time {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="invitation-wrapper">
+    
+    <!-- Monogram -->
+    <div class="monogram-badge">
+      <span id="uiMonogram"></span>
+    </div>
+
+    <!-- Eyebrow & Names -->
+    <p class="eyebrow" id="uiEyebrow"></p>
+    
+    <h1 class="couple-names">
+      <span id="uiGroom"></span>
+      <span class="ampersand">&amp;</span>
+      <span id="uiBride"></span>
+    </h1>
+
+    <p class="invitation-note" id="uiNote"></p>
+
+    <!-- Interactive Date / Countdown Box -->
+    <div class="interactive-date-card" id="dateToggleCard" role="button" tabindex="0">
+      
+      <!-- Date View (Default) -->
+      <div id="dateView">
+        <div class="date-main" id="uiDateMain"></div>
+        <div class="time-sub" id="uiTimeSub"></div>
+        <span class="toggle-cue">Tap for countdown</span>
+      </div>
+
+      <!-- Live Countdown View (Hidden by default) -->
+      <div id="countdownView" class="hidden">
+        <div class="countdown-grid">
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cdDays">00</span>
+            <span class="countdown-lbl">Days</span>
+          </div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cdHours">00</span>
+            <span class="countdown-lbl">Hours</span>
+          </div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cdMinutes">00</span>
+            <span class="countdown-lbl">Mins</span>
+          </div>
+          <div class="countdown-cell">
+            <span class="countdown-num" id="cdSeconds">00</span>
+            <span class="countdown-lbl">Secs</span>
+          </div>
+        </div>
+        <span class="toggle-cue">Tap to show date</span>
+      </div>
+
+    </div>
+
+    <!-- Calendar Sync Links -->
+    <div class="calendar-actions">
+      <a href="#" id="googleCalBtn" class="btn-cal" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="0" ry="0"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Google Calendar
+      </a>
+      <button class="btn-cal" id="icsDownloadBtn" type="button">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a0 0 0 0 1 0 0H5a0 0 0 0 1 0 0v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Apple / Outlook (.ics)
+      </button>
+    </div>
+
+    <div class="hairline-divider"></div>
+
+    <!-- Order of Events -->
+    <h2 class="section-title">Order of Events</h2>
+    <ul class="itinerary-list" id="uiItinerary"></ul>
+
+    <div class="hairline-divider"></div>
+
+    <!-- Venue & Location Details -->
+    <h2 class="section-title">The Venue</h2>
+    <div class="venue-block">
+      <h3 class="venue-name" id="uiVenueName"></h3>
+      <p class="venue-address" id="uiVenueAddress"></p>
+
+      <div class="map-frame-wrapper">
+        <iframe 
+          id="uiMapFrame"
+          src="" 
+          title="Venue Map"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div>
+        <a href="#" id="uiDirectionsLink" class="btn-directions" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          Get Directions
+        </a>
+      </div>
+    </div>
+
+    <!-- Valediction -->
+    <p class="valediction" id="uiValediction"></p>
+
+  </main>
+
+  <!-- Configuration JSON and Scripts -->
+  <script>
+    const WEDDING_CONFIG = {
+      pageTitle: "Jitin & Jincy invites you",
+      monogram: "JJ",
+      eyebrow: "Together with our families",
+      groom: "Jitin Jacob Gigi",
+      bride: "Jincy Mathew",
+      invitationNote: "invite you to celebrate the holy sacrament of our marriage and be part of our journey together.",
+      dateMain: "Saturday, January 16, 2027",
+      timeSub: "10:30 AM IST",
+      targetDateUtc: {
+        year: 2027,
+        monthIndex: 0,
+        day: 16,
+        hourUtc: 5,
+        minuteUtc: 0,
+        secondUtc: 0
+      },
+      itinerary: [
+        {
+          time: "10:30 AM",
+          title: "Ceremonial Holy Mass",
+          description: "Sacred matrimony blessing at Sacred Heart Church"
+        },
+        {
+          time: "1:00 PM",
+          title: "Traditional Feast",
+          description: "Celebratory Kerala wedding lunch"
+        },
+        {
+          time: "3:30 PM",
+          title: "Family Gathering",
+          description: "Evening tea, felicitations, and fellowship"
+        }
+      ],
+      venue: {
+        name: "Sacred Heart Church",
+        addressHtml: "Karimpanakulam, Manimala<br>Kottayam District, Kerala 686544",
+        mapEmbedSrc: "https://maps.google.com/maps?q=Sacred+Heart+Church+Karimpanakulam+Manimala+Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed",
+        directionsUrl: "https://www.google.com/maps/search/?api=1&query=Sacred+Heart+Church+Karimpanakulam+Manimala"
+      },
+      valediction: "We eagerly await celebrating this day in your gracious company.",
+      calendar: {
+        title: "Wedding: Jitin & Jincy",
+        description: "Holy Mass at 10:30 AM followed by feast and family gathering.",
+        location: "Sacred Heart Church, Karimpanakulam, Manimala, Kerala 686544",
+        utcStartStr: "20270116T050000Z",
+        utcEndStr: "20270116T113000Z"
+      }
+    };
+
+    function renderPage(cfg) {
+      document.getElementById('docTitle').textContent = cfg.pageTitle;
+      document.getElementById('uiMonogram').textContent = cfg.monogram;
+      document.getElementById('uiEyebrow').textContent = cfg.eyebrow;
+      document.getElementById('uiGroom').textContent = cfg.groom;
+      document.getElementById('uiBride').textContent = cfg.bride;
+      document.getElementById('uiNote').textContent = cfg.invitationNote;
+      document.getElementById('uiDateMain').textContent = cfg.dateMain;
+      document.getElementById('uiTimeSub').textContent = cfg.timeSub;
+      document.getElementById('uiVenueName').textContent = cfg.venue.name;
+      document.getElementById('uiVenueAddress').innerHTML = cfg.venue.addressHtml;
+      document.getElementById('uiMapFrame').src = cfg.venue.mapEmbedSrc;
+      document.getElementById('uiDirectionsLink').href = cfg.venue.directionsUrl;
+      document.getElementById('uiValediction').textContent = cfg.valediction;
+
+      const listEl = document.getElementById('uiItinerary');
+      listEl.innerHTML = '';
+      cfg.itinerary.forEach(function(item) {
+        const li = document.createElement('li');
+        li.className = 'itinerary-item';
+        
+        const timeDiv = document.createElement('div');
+        timeDiv.className = 'itinerary-time';
+        timeDiv.textContent = item.time;
+
+        const detailsDiv = document.createElement('div');
+        detailsDiv.className = 'itinerary-details';
+
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'itinerary-name';
+        nameDiv.textContent = item.title;
+
+        const subDiv = document.createElement('div');
+        subDiv.className = 'itinerary-sub';
+        subDiv.textContent = item.description;
+
+        detailsDiv.appendChild(nameDiv);
+        detailsDiv.appendChild(subDiv);
+        li.appendChild(timeDiv);
+        li.appendChild(detailsDiv);
+        listEl.appendChild(li);
+      });
+
+      const gcal = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+        "&text=" + encodeURIComponent(cfg.calendar.title) +
+        "&dates=" + cfg.calendar.utcStartStr + "/" + cfg.calendar.utcEndStr +
+        "&details=" + encodeURIComponent(cfg.calendar.description) +
+        "&location=" + encodeURIComponent(cfg.calendar.location);
+      document.getElementById('googleCalBtn').href = gcal;
+    }
+
+    renderPage(WEDDING_CONFIG);
+
+    const t = WEDDING_CONFIG.targetDateUtc;
+    const targetTimestamp = Date.UTC(t.year, t.monthIndex, t.day, t.hourUtc, t.minuteUtc, t.secondUtc);
+    
+    let isCountdown = false;
+    let timerInterval = null;
+
+    const dateCard = document.getElementById('dateToggleCard');
+    const dateView = document.getElementById('dateView');
+    const countdownView = document.getElementById('countdownView');
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetTimestamp - now;
+
+      if (diff <= 0) {
+        document.getElementById('cdDays').textContent = '00';
+        document.getElementById('cdHours').textContent = '00';
+        document.getElementById('cdMinutes').textContent = '00';
+        document.getElementById('cdSeconds').textContent = '00';
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cdDays').textContent = d < 10 ? '0' + d : d;
+      document.getElementById('cdHours').textContent = h < 10 ? '0' + h : h;
+      document.getElementById('cdMinutes').textContent = m < 10 ? '0' + m : m;
+      document.getElementById('cdSeconds').textContent = s < 10 ? '0' + s : s;
+    }
+
+    function toggleView() {
+      isCountdown = !isCountdown;
+      if (isCountdown) {
+        dateView.classList.add('hidden');
+        countdownView.classList.remove('hidden');
+        updateCountdown();
+        timerInterval = setInterval(updateCountdown, 1000);
+      } else {
+        countdownView.classList.add('hidden');
+        dateView.classList.remove('hidden');
+        if (timerInterval) clearInterval(timerInterval);
+      }
+    }
+
+    dateCard.addEventListener('click', toggleView);
+    dateCard.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleView();
+      }
+    });
+
+    document.getElementById('icsDownloadBtn').addEventListener('click', function() {
+      const c = WEDDING_CONFIG.calendar;
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Wedding Invitation//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        'DTSTART:' + c.utcStartStr,
+        'DTEND:' + c.utcEndStr,
+        'SUMMARY:' + c.title,
+        'DESCRIPTION:' + c.description.replace(/\n/g, '\\n'),
+        'LOCATION:' + c.location,
+        'STATUS:CONFIRMED',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'wedding-invitation.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
